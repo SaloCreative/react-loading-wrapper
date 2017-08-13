@@ -1296,7 +1296,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports['default'] = FetchFail;
 
 	FetchFail.propTypes = {
-	  message: _propTypes2['default'].object,
+	  message: _propTypes2['default'].string,
 	  retryAction: _propTypes2['default'].func
 	};
 
