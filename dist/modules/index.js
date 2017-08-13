@@ -4,9 +4,13 @@ exports.__esModule = true;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _YourComponent = require('./YourComponent');
+var _componentsLoadingWrapper = require('./components/loadingWrapper');
 
-var _YourComponent2 = _interopRequireDefault(_YourComponent);
+var _componentsLoadingWrapper2 = _interopRequireDefault(_componentsLoadingWrapper);
 
-exports['default'] = { YourComponent: _YourComponent2['default'] };
-module.exports = exports['default'];
+var _componentsFetchFail = require('./components/fetchFail');
+
+var _componentsFetchFail2 = _interopRequireDefault(_componentsFetchFail);
+
+exports['default'] = _componentsLoadingWrapper2['default'];
+exports.FetchFail = _componentsFetchFail2['default'];

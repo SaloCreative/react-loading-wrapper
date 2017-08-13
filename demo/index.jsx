@@ -3,13 +3,13 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import YourComponent from '../src/YourComponent';
+import LoadingWrapper from '../src/components/loadingWrapper';
 
 class Demo extends React.Component {
 
   render() {
     return (
-      <YourComponent />
+      <LoadingWrapper />
     );
   }
 
