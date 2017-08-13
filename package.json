@@ -1,6 +1,6 @@
 {
   "name": "@salocreative/react-loading-wrapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A loading wrapper and supporting components for handling async loading actions",
   "main": "./dist/modules/index.js",
   "scripts": {

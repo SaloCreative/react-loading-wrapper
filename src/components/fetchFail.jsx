@@ -25,7 +25,7 @@ export default class FetchFail extends Component {
 }
 
 FetchFail.propTypes = {
-  message: PropTypes.object,
+  message: PropTypes.string,
   retryAction: PropTypes.func
 };
 
