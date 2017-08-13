@@ -1,12 +1,12 @@
 {
-  "name": "react-component-starter-kit",
+  "name": "@salocreative/react-loading-wrapper",
   "version": "0.0.1",
-  "description": "Simple React component starter kit stuff.",
+  "description": "A loading wrapper and supporting components for handling async loading actions",
   "main": "./dist/modules/index.js",
   "scripts": {
     "bundle-demo": "webpack --config webpack.config.demo.js",
     "bundle-dist": "webpack --config webpack.config.dist.js",
-    "bundle-modules": "rm dist/modules/* && babel src --loose --out-dir dist/modules",
+    "bundle-modules": "rm -rf dist/modules/* && babel src --loose --out-dir dist/modules",
     "bundle": "npm run bundle-demo && npm run bundle-dist && npm run bundle-modules",
     "demo": "webpack-dev-server --config webpack.config.demo.js",
     "lint": "eslint ./src",
@@ -15,10 +15,12 @@
   "author": "Rich Comber",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SaloCreative/react__component-name.git"
+    "url": "https://github.com/SaloCreative/react-loading-wrapper.git"
   },
   "license": "MIT",
   "dependencies": {
+    "@salocreative/react-ui": "^1.7.0",
+    "prop-types": "^15.5.10",
     "react": "^0.14.2"
   },
   "devDependencies": {

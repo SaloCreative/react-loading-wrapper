@@ -1,5 +1,9 @@
 'use strict';
 
-import YourComponent from './YourComponent';
+import LoadingWrapper from './components/loadingWrapper';
+import FetchFail from './components/fetchFail';
 
-export default YourComponent;
+export default LoadingWrapper;
+export {
+  FetchFail
+}

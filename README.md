@@ -1,50 +1,39 @@
-# React Component Starter Kit
+# react-loading-wrapper
 
-This is supposed to be a simple starter-kit for creating Open Source React
-Components. It should include/support:
+A loading wrapper and supporting components for handling async loading actions
 
-* a nice README
-* some kind of LICENSE
-* build + tests
-* dist files (amd, common, global)
-* .dotfiles
-* example + demo (gh-pages, maybe?)
+## Install
 
-### Commands
-
-```shell
-$ cd your-component
-$ yarn                          # Install development dependencies
-$ npm run bundle                # Build scripts
-$ npm run demo                  # Run webpack dev server
 ```
-
----
-
-# manager-component-name
-
-Description of component and any special notes
+yarn add @salocreative/react-loading-wrapper
+```
 
 ## Usage
 
-Install
-
 ```
-yarn add @salocreative/component-name
+import LoadingWrapper from '@salocreative/react-ui';
 ```
 
-Include the component at the top of the component it's required in.
+implement as follows
 
 ```
-import ComponentName from '@salocreative/component-name';
+<LoadingWrapper
+  display={ displayContent }
+  loading={ product.meta.fetching }
+  error={ product.meta.failed }
+  errorMessage={ ErrorMessages.getProductFailed.message }
+  retryAction={ () => this.attemptProductFetch() }
+>
+
+ Wrapped content dependant on Async content goes here
+
+</LoadingWrapper>
 ```
 
-Implement as follows
+The Loading wrapper is designed to wrap content that depends on an Async action (or multiple) resolving and improve the user experience. It can show a loading spinner while requests are processing and also error messages and even emit retry actions on failure. With this in mind the wrapper needs/accepts the following props:
 
-```
-<ComponentName />
-```
-
-## LICENSE
-
-MIT
+- `display` : boolean value of whether the content in the wrapper should display or not. This should be based on the response of the Async action and passed in from a function as required. e.g. request complete and response has data ets
+- `loading` boolean value determines whether the loading spinner should show
+- `error` : boolean value that sets whether error should be displayed
+- `errorMessage` : string value that sets the error message for the wrapper if the error flag is set to true
+- `retryAction` : optional function that can be used to trigger further fetch attempts if the previous one has failed
